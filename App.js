@@ -44,10 +44,10 @@ export default class App extends Component<Props, State> {
     PassingManagerEmitter.addListener(
       'EventReminder',
       (data) => {
-        this.setState({title: data})
+        this.setState({title: JSON.stringify(data)})
       }
     )
-    PassingManager.tellClient()
+    PassingManager.tellClient({"msg":'Hello Client', "array": ["1","2","3"]})
   }
 
   componentWillUnmount() {

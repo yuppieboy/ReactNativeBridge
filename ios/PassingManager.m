@@ -36,9 +36,9 @@ RCT_EXPORT_MODULE();
   [self sendEventWithName:@"EventReminder" body:message];
 }
 
-RCT_EXPORT_METHOD(tellClient)
+RCT_EXPORT_METHOD(tellClient:(id) body)
 {
-  NSLog(@"yahaha");
+  NSLog(@"Receive message from JS :%@", body);
 }
 
 @end
